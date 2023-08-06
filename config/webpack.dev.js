@@ -5,13 +5,10 @@ const commonConfig = require('./webpack.common.js');
 
 module.exports = merge(commonConfig, {
   mode: 'development',
-  devtool: 'inline-source-map',
   devServer: {
     static: {
       directory: paths.dist,
     },
-    historyApiFallback: true,
-
     open: true,
     compress: true,
     hot: true,
@@ -21,31 +18,8 @@ module.exports = merge(commonConfig, {
     rules: [
       {
         test: /\.(scss|css)$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              importLoaders: 1,
-              modules: true,
-            },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
 });
