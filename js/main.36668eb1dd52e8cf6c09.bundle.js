@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdigitalproject=self.webpackChunkdigitalproject||[]).push([[179],{497:function(){console.log("this is an example")}},function(e){e(e.s=497)}]);
