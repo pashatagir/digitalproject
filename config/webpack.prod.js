@@ -23,6 +23,7 @@ module.exports = merge(commonConfig, {
             options: {
               importLoaders: 2,
               sourceMap: false,
+              modules: true,
             },
           },
           'postcss-loader',
