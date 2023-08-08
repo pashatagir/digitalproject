@@ -56,9 +56,13 @@ module.exports = merge(commonConfig, {
   ],
   optimization: {
     minimize: true,
-    minimizer: [new CssMinimizerPlugin(), '...', new HtmlMinimizerPlugin({
+    minimizer: [
+      new CssMinimizerPlugin(),
+      '...',
+      new HtmlMinimizerPlugin({
         parallel: true,
-      })],
+      }),
+    ],
     runtimeChunk: {
       name: 'runtime',
     },
