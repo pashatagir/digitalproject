@@ -30,7 +30,7 @@ module.exports = merge(commonConfig, {
             options: {
               importLoaders: 2,
               sourceMap: true,
-              modules: true,
+              modules: false,
             },
           },
 
