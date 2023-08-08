@@ -22,4 +22,5 @@ module.exports = merge(commonConfig, {
       },
     ],
   },
+  plugins: [new webpack.HotModuleReplacementPlugin()],
 });

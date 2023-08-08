@@ -1,0 +1,70 @@
+.navigation {
+  @include flex(flex, null, null);
+  padding: 29px 0px;
+  @include font(400, 12px, 1, 0.2em);
+  text-transform: uppercase;
+
+  &__logo {
+    margin-right: 330px;
+  }
+
+  &__list {
+    display: flex;
+    @include flex(flex, null, center);
+    gap: 60px;
+  }
+
+  &__link {
+    position: relative;
+    transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    &--current::after,
+    &--current::before {
+      content: '';
+      display: block;
+      width: 98%;
+      height: 1px;
+      background-color: $primaryColor;
+
+      position: absolute;
+      left: 0;
+    }
+    &--current::after {
+      bottom: -4px;
+    }
+    &--current::before {
+      top: -4px;
+    }
+
+    &:not(&--current)::after,
+    &:not(&--current)::before {
+      content: '';
+      display: block;
+      width: 98%;
+      height: 1px;
+      background-color: $primaryColor;
+
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+
+      transform: scaleX(0);
+      transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
+    }
+    &:not(&--current)::after {
+      bottom: -4px;
+    }
+    &:not(&--current)::before {
+      top: -4px;
+    }
+
+    &:hover::after,
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+}

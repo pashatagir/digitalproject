@@ -12,24 +12,20 @@
       <div class="container">
         <nav class="navigation">
           <a href="#"
-            ><svg width="70" height="44">
+            ><svg width="70" height="44" class="navigation__logo">
               <use href="./images/symbol.svg#icon-logo"></use>
             </svg>
           </a>
           <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="#" class="navigation__link" lang="ru"></a>Главная
+            <li>
+              <a href="#" class="navigation__link navigation__link--current" lang="ru">Главная</a>
             </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link" lang="ru"></a>Галерея
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link" lang="ru"></a>Проекты
-            </li>
-            <li class="navigation__item">
+            <li><a href="#" class="navigation__link" lang="ru">Галерея</a></li>
+            <li><a href="#" class="navigation__link" lang="ru">Проекты</a></li>
+            <li>
               <a href="#" class="navigation__link" lang="ru">Сертификаты</a>
             </li>
-            <li class="navigation__item">
+            <li>
               <a href="#" class="navigation__link" lang="ru">Контакты</a>
             </li>
           </ul>
@@ -57,7 +53,7 @@
           </svg>
         </button>
       </section>
-      <section class="general-tasks">
+      <section class="tasks">
         <h2>Основные задачи</h2>
         <ul>
           <li>
@@ -73,8 +69,8 @@
           </li>
         </ul>
       </section>
-      <section class="our-project"><h2>Наши проекты</h2></section>
-      <section class="contact-with-us">
+      <section class="projects"><h2>Наши проекты</h2></section>
+      <section class="contact">
         <h2>Связаться с нами</h2>
         <form action="">
           <label for=""><input type="text" />Имя</label
@@ -176,6 +172,7 @@
           </a>
         </li>
       </ul>
+      <small class="copyrite"><p>&copy 2019 Digital Project. Все права защищены.</p></small>
     </footer>
   </body>
 </html>

@@ -14,8 +14,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        use: ['babel-loader'],
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [['@babel/preset-env']],
+          },
+        },
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
@@ -44,7 +50,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    modules: [paths.src, 'node_modules'],
+    modules: [paths.dist, 'node_modules'],
     extensions: ['.js', '.json'],
   },
 };
