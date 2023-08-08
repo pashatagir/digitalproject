@@ -1,0 +1,81 @@
+.hero {
+  @include flex(flex, space-between, null);
+
+  &__wrapper--left {
+    padding-top: 336px;
+  }
+
+  &__wrapper--right {
+    position: relative;
+  }
+
+  &__title {
+    font-family: $titleFontFamily;
+    @include font(300, 64px, null, null);
+    text-transform: uppercase;
+    color: $secondaryColor;
+    & > span {
+      font-family: $mainFontFamily;
+      color: $primaryColor;
+    }
+    margin-bottom: 90px;
+  }
+
+  &__btn-slider {
+    width: 53px;
+    height: 53px;
+    border: 1px solid $borderBtnColor;
+    @include flex(flex, center, center);
+    background-color: #f9f9f9;
+    &--right {
+      transform: rotate(180deg);
+      margin-left: 23px;
+      &::after {
+        content: '';
+        display: block;
+        width: 271px;
+        height: 1px;
+        background-color: $borderBtnColor;
+        position: absolute;
+        right: 52px;
+      }
+    }
+    &:disabled {
+      background-color: transparent;
+    }
+
+    &:hover .icon-arrow {
+      transform: scale(1.5);
+    }
+  }
+
+  .decor-line {
+    width: 271px;
+    height: 1px;
+  }
+  .btn-wrapper {
+    @include flex(flex, flex-start, center);
+    flex-direction: row;
+  }
+
+  &__button {
+    font-family: $secondaryFontFamily;
+    @include font(400, 12px, 1, 0.2em);
+    text-transform: uppercase;
+    @include flex(flex, flex-start, center);
+    gap: 12px;
+    padding: 24px 50px;
+    position: absolute;
+    bottom: 0;
+    background-color: #ffffff;
+
+    &:hover .icon-arrow {
+      transform: scale(1.5);
+    }
+  }
+
+  .icon-arrow {
+    transform: scale(1);
+    transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
+  }
+}

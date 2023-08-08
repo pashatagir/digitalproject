@@ -1,3 +1,7 @@
+* {
+  cursor: url('../images/pencil-cursor.png'), auto;
+}
+
 a,
 h1,
 h2,
@@ -16,6 +20,9 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 img {
@@ -28,6 +35,12 @@ svg {
   display: block;
 }
 
-* {
-  cursor: url('../images/pencil-cursor.png'), auto;
+button {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  &:hover {
+    cursor: pointer;
+  }
 }

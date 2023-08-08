@@ -1,19 +1,29 @@
 @font-face {
-  font-family: GothicA1;
+  font-family: Gothic-A1;
   src: url('../fonts/GothicA1-Regular.ttf');
+}
 
-  font-family: SfProDisplay;
+@font-face {
+  font-family: SFPRODISPLAYBOLD;
   src: url('../fonts/SFPRODISPLAYBOLD.OTF');
+}
 
-  font-family: TTHovesBold;
+@font-face {
+  font-family: TT-Hoves-Bold;
   src: url('../fonts/TT-Hoves-Bold.otf');
+}
 
-  font-family: TTHovesLigth;
+@font-face {
+  font-family: TT-Hoves-Ligth;
   src: url('../fonts/TT-Hoves-Light.otf');
+}
 
-  font-family: TTHovesMedium;
+@font-face {
+  font-family: TT-Hoves-Medium;
   src: url('../fonts/TT-Hoves-Medium.otf');
+}
 
-  font-family: TTHovesRegular;
+@font-face {
+  font-family: TT-Hoves-Regular;
   src: url('../fonts/TT-Hoves-Regular.otf');
 }

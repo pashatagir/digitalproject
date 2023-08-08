@@ -1,6 +1,7 @@
 .navigation {
   @include flex(flex, null, null);
   padding: 29px 0px;
+  font-family: $secondaryFontFamily;
   @include font(400, 12px, 1, 0.2em);
   text-transform: uppercase;
 
