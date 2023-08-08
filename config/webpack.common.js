@@ -14,14 +14,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(?:js|mjs|cjs)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [['@babel/preset-env']],
-          },
-        },
+        test: /\.js$/,
+        use: ['babel-loader'],
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
