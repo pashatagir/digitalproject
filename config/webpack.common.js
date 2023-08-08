@@ -1,6 +1,7 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 const WebpackBar = require('webpackbar');
 const paths = require('./paths');
 
@@ -30,17 +31,13 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new WebpackBar(),
-    new CopyWebpackPlugin({
+    new CopyPlugin({
       patterns: [
         {
           from: paths.src + '/images',
           to: paths.dist + '/images',
         },
       ],
-    }),
-    new HtmlWebpackPlugin({
-      template: paths.src + '/index.html',
-      filename: 'index.html',
     }),
   ],
   resolve: {

@@ -44,5 +44,11 @@ module.exports = merge(commonConfig, {
       },
     ],
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: paths.src + '/index.html',
+      filename: 'index.html',
+    }),
+  ],
 });
