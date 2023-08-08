@@ -2,7 +2,7 @@
   "name": "digitalproject",
   "version": "1.0.0",
   "description": "single page application",
-  "main": "index.js",
+  "homepage": "https://pashatagir.github.io/digitalproject",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js"
