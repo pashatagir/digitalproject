@@ -1,0 +1,1 @@
+{"version":3,"file":"js/main.331e80b3796e0466bf7c.bundle.js","mappings":"+GAA6BA,QAAQC,IAAI,qB","sources":["webpack://digitalproject/./src/js/example.js"],"sourcesContent":["export const example = () => console.log('this is an example');\n"],"names":["console","log"],"sourceRoot":""}

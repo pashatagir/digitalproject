@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdigitalproject=self.webpackChunkdigitalproject||[]).push([[179],{868:function(){console.log("this is an example")}},function(e){e(e.s=868)}]);
-//# sourceMappingURL=main.d2e998afc83190545549.bundle.js.map
