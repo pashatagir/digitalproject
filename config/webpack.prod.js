@@ -26,12 +26,11 @@ module.exports = merge(commonConfig, {
             options: {
               importLoaders: 2,
               sourceMap: true,
-              modules: true,
             },
           },
 
-          { loader: 'postcss-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true } },
+          'postcss-loader',
+          'sass-loader',
         ],
       },
     ],
@@ -40,10 +39,6 @@ module.exports = merge(commonConfig, {
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
-    }),
-    new HtmlWebpackPlugin({
-      template: paths.src + '/index.html',
-      filename: 'index.html',
     }),
   ],
   optimization: {

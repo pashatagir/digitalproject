@@ -1,5 +1,6 @@
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const WebpackBar = require('webpackbar');
 const paths = require('./paths');
@@ -37,6 +38,10 @@ module.exports = {
           to: paths.dist + '/images',
         },
       ],
+    }),
+    new HtmlWebpackPlugin({
+      template: paths.src + '/index.html',
+      filename: 'index.html',
     }),
   ],
   resolve: {
