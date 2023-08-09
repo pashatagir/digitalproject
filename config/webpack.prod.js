@@ -12,7 +12,6 @@ module.exports = merge(commonConfig, {
   devtool: 'source-map',
   output: {
     path: paths.dist,
-    publicPath: '/',
     filename: 'js/[name].[contenthash].bundle.js',
   },
   module: {
@@ -26,6 +25,7 @@ module.exports = merge(commonConfig, {
             options: {
               importLoaders: 2,
               sourceMap: true,
+              modules: { localIdentName: '[hash:base64]' },
             },
           },
 

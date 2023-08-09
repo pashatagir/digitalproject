@@ -10,7 +10,6 @@ module.exports = {
   output: {
     path: paths.dist,
     filename: '[name].bundle.js',
-    publicPath: '/',
   },
   module: {
     rules: [
