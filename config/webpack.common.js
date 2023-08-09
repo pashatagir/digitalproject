@@ -40,7 +40,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    modules: [paths.dist, 'node_modules'],
+    modules: [paths.src, 'node_modules'],
     extensions: ['.js', '.json'],
   },
 };

@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { merge } = require('webpack-merge');
 const paths = require('./paths');
@@ -24,7 +23,6 @@ module.exports = merge(commonConfig, {
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: paths.src + '/index.html',
       filename: 'index.html',

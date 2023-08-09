@@ -1,7 +1,8 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const { merge } = require('webpack-merge');
 const paths = require('./paths');
 const commonConfig = require('./webpack.common.js');
@@ -17,13 +18,8 @@ module.exports = merge(commonConfig, {
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        type: 'asset/resource',
-      },
-      {
         test: /\.(scss|css)$/,
         use: [
-          'style-loader',
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
@@ -45,18 +41,14 @@ module.exports = merge(commonConfig, {
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
     }),
-    new CopyPlugin({
-      patterns: [
-        {
-          context: paths.dist + '/index.html',
-          from: paths.src + '/index.html',
-        },
-      ],
+    new HtmlWebpackPlugin({
+      template: paths.src + '/index.html',
+      filename: 'index.html',
     }),
   ],
   optimization: {
     minimize: true,
-    minimizer: [new CssMinimizerPlugin(), '...', new HtmlMinimizerPlugin()],
+    minimizer: [new CssMinimizerPlugin(), '...'],
     runtimeChunk: {
       name: 'runtime',
     },
